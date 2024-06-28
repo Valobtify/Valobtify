@@ -2,7 +2,7 @@
 - [Getting started](#getting-started)
     - [Installing](#1-Installing-package)
     - [Usage](#2-Usage)
-
+- [Single-Value objects](#getting-started)
 
 
 ## Getting started
@@ -18,3 +18,10 @@
       
    }
    ```
+
+## Single-Value objects 
+    ```csharp
+       public class MyValueObject : SingleValueObject
+       {
+          
+       }
