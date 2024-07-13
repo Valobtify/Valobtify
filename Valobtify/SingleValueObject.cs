@@ -1,24 +1,25 @@
-﻿namespace Valobtify
+﻿namespace Valobtify;
+
+public abstract class SingleValueObject<TValue> : ValueObject
 {
-    public abstract class SingleValueObject<TValue> : ValueObject
-    where TValue : class
+    public virtual required TValue Value { get; init; }
+
+    public override IEnumerable<object?> GetAtomicValues()
     {
-        public virtual required TValue Value { get; init; }
+        yield return Value;
+    }
 
-        public override IEnumerable<object> GetAtomicValues()
+    public override string? ToString()
+    {
+        if (Value is not null)
         {
-            yield return Value;
+            return Value.ToString();
         }
+        return null;
+    }
 
-        public override string ToString()
-        {
-            return Value.ToString() ??
-                throw new NullReferenceException("value is null");
-        }
-
-        public static explicit operator string(SingleValueObject<TValue> value)
-        {
-            return value.ToString();
-        }
+    public static explicit operator string(SingleValueObject<TValue> value)
+    {
+        return value.ToString() ?? "";
     }
 }
