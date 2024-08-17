@@ -1,10 +1,15 @@
 [![NuGet Package](https://img.shields.io/nuget/v/Valobtify)](https://www.nuget.org/packages/Valobtify/)
 
 ### Table of content
-- [Table of content](#table-of-content)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Single-Value Objects](#single-value-objects)
   - [Using Data Annotation](#using-data-annotation)
+
+### Installation
+```shell
+dotnet add package Valobtify
+```
 
 ### Usage 
 ```csharp
