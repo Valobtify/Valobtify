@@ -1,31 +1,49 @@
+[![NuGet Package](https://img.shields.io/nuget/v/Valobtify)](https://www.nuget.org/packages/Valobtify/)
+
 ### Table of content
-- [Getting started](#getting-started)
-    - [Installing](#1-Installing-package)
-    - [Usage](#2-Usage)
-- [Single-Value objects](#Single-Value-objects)
+- [Table of content](#table-of-content)
+- [Usage](#usage)
+- [Single-Value Objects](#single-value-objects)
+  - [Using Data Annotation](#using-data-annotation)
 
-
-## Getting started
-### 1. Installing package
-  ```bash
-  dotnet add package Valobtify
-  ```
-
-  ### 2. Usage
-   ```csharp
-   public class MyValueObject : ValueObject
-   {
-      
-   }
-   ```
-
-### Single-Value objects 
-single avlue object is used when your object has only one property
-
+### Usage 
 ```csharp
-public class MyValueObject : SingleValueObject<string>
+
+public class Price : ValueObject
 {
-          
+    public decimal Amount { get; set; }
+    public string Currency { get; set; }
+
+    public override IEnumerable<object?> GetAtomicValues()
+    {
+        return [Amount, Currency];
+    }
 }
-       
+
 ```
+
+
+### Single-Value Objects
+```csharp
+public class UserName : SingleValueObject<string>
+{
+    public UserName(string value)
+    {
+        if (value.Length > 20)
+            throw new Exception("Name is not valid!");
+
+        Value = value;
+    }
+}
+```
+
+#### Using Data Annotation
+```csharp
+public class UserName : SingleValueObject<string>
+{
+    [MaxLength(20)]
+    public override required string Value { get; init; }
+}
+```
+
+
