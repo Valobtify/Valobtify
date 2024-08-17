@@ -19,10 +19,11 @@
    }
    ```
 
-## Single-Value objects 
+### Single-Value objects 
+single avlue object is used when your object has only one property
 
 ```csharp
-public class MyValueObject : SingleValueObject
+public class MyValueObject : SingleValueObject<string>
 {
           
 }
