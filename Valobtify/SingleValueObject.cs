@@ -1,14 +1,8 @@
 ﻿namespace Valobtify;
 
-public abstract class SingleValueObject<TValue, TValuleObject> : ValueObject
-    where TValuleObject : SingleValueObject<TValue, TValuleObject>, new()
+public abstract class SingleValueObject<TValue> : ValueObject
 {
-    public virtual TValue? Value { get; init; }
-
-    public static TValuleObject Create(TValue value)
-    {
-        return new TValuleObject { Value = value };
-    }
+    public virtual required TValue Value { get; init; }
 
     public override IEnumerable<object?> GetAtomicValues()
     {
@@ -23,7 +17,7 @@ public abstract class SingleValueObject<TValue, TValuleObject> : ValueObject
         return null;
     }
 
-    public static explicit operator string(SingleValueObject<TValue, TValuleObject> value)
+    public static explicit operator string(SingleValueObject<TValue> value)
     {
         return value.ToString() ?? "";
     }

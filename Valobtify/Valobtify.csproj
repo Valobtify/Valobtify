@@ -8,7 +8,7 @@
     <Description>'Value Object' Implementation package</Description>
     <PackageProjectUrl>https://github.com/M0BIN-V/Valobtify</PackageProjectUrl>
     <RepositoryUrl>https://github.com/M0BIN-V/Valobtify</RepositoryUrl>
-    <Version>1.0.31</Version>
+    <Version>1.0.32</Version>
     <PackageIcon>Valobtify_Logo.png</PackageIcon>
   </PropertyGroup>
 
