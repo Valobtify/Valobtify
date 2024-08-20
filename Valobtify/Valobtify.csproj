@@ -1,22 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Title>Valobtify</Title>
-    <Description>'Value Object' Implementation package</Description>
-    <PackageProjectUrl>https://github.com/M0BIN-V/Valobtify</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/M0BIN-V/Valobtify</RepositoryUrl>
-    <Version>1.0.32</Version>
-    <PackageIcon>Valobtify_Logo.png</PackageIcon>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Title>Valobtify</Title>
+		<Description>A package for implementing the 'Value Object' pattern.</Description>
+		<PackageProjectUrl>https://github.com/M0BIN-V/Valobtify</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/M0BIN-V/Valobtify</RepositoryUrl>
+		<Version>1.0.32</Version>
+		<PackageIcon>ValobtifyIcon.png</PackageIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Update="Valobtify_Logo.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="ValobtifyIcon.png" Pack="true" PackagePath=""/>
+	</ItemGroup>
 
 </Project>
