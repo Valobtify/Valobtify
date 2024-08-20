@@ -8,12 +8,17 @@
 		<Description>A package for implementing the 'Value Object' pattern.</Description>
 		<PackageProjectUrl>https://github.com/M0BIN-V/Valobtify</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/M0BIN-V/Valobtify</RepositoryUrl>
-		<Version>1.0.4</Version>
+		<Version>1.0.5</Version>
 		<PackageIcon>ValobtifyIcon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="ValobtifyIcon.png" Pack="true" PackagePath=""/>
+		<None Include="..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="ValobtifyIcon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 </Project>
