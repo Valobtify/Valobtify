@@ -9,6 +9,11 @@ public abstract class ValueObject : IEquatable<ValueObject>
         return other is not null && ValuesAreEqual(other);
     }
 
+    public override bool Equals(object? obj)
+    {
+        return Equals(obj as ValueObject);
+    }
+
     public override int GetHashCode()
     {
         return GetAtomicValues()
