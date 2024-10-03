@@ -26,4 +26,8 @@
 		<None Include="ValobtifyIcon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="Resulver" Version="1.2.4" />
+	</ItemGroup>
+
 </Project>
