@@ -27,7 +27,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Resulver" Version="1.2.4" />
+	  <PackageReference Include="Resulver" Version="1.2.5" />
 	</ItemGroup>
 
 </Project>

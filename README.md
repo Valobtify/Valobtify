@@ -29,26 +29,19 @@ public class Price : ValueObject
 
 
 ### Single-Value Objects
-```csharp
-public class UserName : SingleValueObject<string>
-{
-    public UserName(string value)
-    {
-        if (value.Length > 20)
-            throw new Exception("Name is not valid!");
 
-        Value = value;
+You can validate value before creating single-value object
+```csharp
+public sealed class Age : SingleValueObject<Age, int>, ICreatableValueObject<Age, int>
+{
+    private Age(int value) : base(value) { }
+
+    public static Result<Age> Create(int value)
+    {
+        if (value < 0) return new ResultError("Age is not valid");
+
+        return new Age(value);
     }
 }
 ```
-
-#### Using Data Annotation
-```csharp
-public class UserName : SingleValueObject<string>
-{
-    [MaxLength(20)]
-    public override required string Value { get; init; }
-}
-```
-
 
