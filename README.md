@@ -5,6 +5,8 @@
 - [Usage](#usage)
 - [Single-Value Objects](#single-value-objects)
   - [Using Data Annotation](#using-data-annotation)
+- [Integrate with EF Core](https://github.com/Valobtify/Valobtify.EntityFrameworkCore) 
+- [Integrate with ASP.NET Core web api](https://github.com/Valobtify/Valobtify.AspNetCore.WebApi)
 
 ### Installation
 ```shell
