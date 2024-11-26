@@ -1,10 +1,10 @@
 [![NuGet Package](https://img.shields.io/nuget/v/Valobtify)](https://www.nuget.org/packages/Valobtify/)
+[![NuGet](https://img.shields.io/nuget/dt/valobtify)](https://www.nuget.org/packages/valobtify)
 
 ### Table of content
 - [Installation](#installation)
-- [Usage](#usage)
+- [Usage](#Usage)
 - [Single-Value Objects](#single-value-objects)
-  - [Using Data Annotation](#using-data-annotation)
 - [Integrate with EF Core](https://github.com/Valobtify/Valobtify.EntityFrameworkCore) 
 - [Integrate with ASP.NET Core web api](https://github.com/Valobtify/Valobtify.AspNetCore.WebApi)
 
