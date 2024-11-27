@@ -2,6 +2,7 @@
 
 public abstract class SingleValueObject<TSingleValueObject, TValue> : ValueObject
     where TSingleValueObject : SingleValueObject<TSingleValueObject, TValue>, ICreatableValueObject<TSingleValueObject, TValue>
+    where TValue : notnull
 {
     public virtual TValue Value { get; }
 
@@ -14,6 +15,6 @@ public abstract class SingleValueObject<TSingleValueObject, TValue> : ValueObjec
 
     public override string? ToString()
     {
-        return Value is not null ? Value.ToString() : null;
+        return Value.ToString();
     }
 }
