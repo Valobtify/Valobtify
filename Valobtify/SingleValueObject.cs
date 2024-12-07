@@ -4,9 +4,24 @@ public abstract class SingleValueObject<TSingleValueObject, TValue> : ValueObjec
     where TSingleValueObject : SingleValueObject<TSingleValueObject, TValue>, ICreatableValueObject<TSingleValueObject, TValue>
     where TValue : notnull
 {
-    public virtual TValue Value { get; }
+    public TValue Value { get; protected init; } = default!;
 
-    protected SingleValueObject(TValue value) => Value = value;
+    protected SingleValueObject(TValue value)
+    {
+        var validationResult = TSingleValueObject.Create(value);
+
+        if (validationResult.IsFailure)
+        {
+            throw new InvalidDataException("value is not valid");
+        }
+        
+        Value = value;
+    }
+
+    protected SingleValueObject()
+    {
+        
+    }
 
     public override IEnumerable<object?> GetAtomicValues()
     {
